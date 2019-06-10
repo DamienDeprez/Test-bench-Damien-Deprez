@@ -1,0 +1,27 @@
+
+If Keil MDK-ARM µVision is well intalled on your computer :
+
+1° Open the windows command line (Start > Execute > cmd)
+
+2° Use the "cd" (change directory command to go to the Keil's installation directory,
+   into the "ARM\ARMCC\bin" folder. By default, it is :
+
+	"C:\Keil_v5\ARM\ARMCC\bin"
+
+   so you "just" have to type :
+
+	cd C:\Keil_v5\ARM\ARMCC\bin
+
+   hint : use the TAB after having type the first letter(s) of a folder to go faster 
+
+3° Use ARM's software "fromelf" to convert your ".axf" file (µVision project output : the memory image) 
+   into an hexadecimal file, by typing the following command :
+
+	fromelf ELEC2570-CM0-HelloWorld.axf --vhx --32x1 --output code.hex
+
+4° Paste the produced hexa file "code.hex" into your "src/sw" directory (the first one). It will be loaded
+   in the demo project that you have to run
+
+
+
+  

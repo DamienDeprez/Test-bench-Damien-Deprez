@@ -1,0 +1,28 @@
+
+# probe wave here, for any verilog module : 
+#
+#	add wave -r :top_level:module_name:*
+#
+#	'-r'  : probe the instance and these sub-instances
+
+# Define probed waves
+#add wave :pixracer_0:ahb_slave_mux_0:*
+#add wave :pixracer_0:memory_0:imem_read_byte
+#add wave :pixracer_0:memory_0:imem_read_half_word
+#add wave :pixracer_0:memory_0:imem_read_word
+#add wave :pixracer_0:memory_0:dmem_read_byte
+#add wave :pixracer_0:memory_0:dmem_read_half_word
+#add wave :pixracer_0:memory_0:dmem_read_word
+#add wave :pixracer_0:memory_0:dmem_write_byte
+#add wave :pixracer_0:memory_0:dmem_write_half_word
+#add wave :pixracer_0:memory_0:dmem_write_word
+#add wave :pixracer_0:memory_0:number_of_cycle
+#add wave :pixracer_0:memory_0:*
+#add wave :pixracer_0:gpio_0:*
+#add wave :tester_0:*
+#add wave :pixracer_0:*
+
+run 10000ms
+
+exit
+ 

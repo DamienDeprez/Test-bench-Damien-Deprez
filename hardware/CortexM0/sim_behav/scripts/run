@@ -1,0 +1,36 @@
+
+# probe wave here, for any verilog module : 
+#
+#	add wave -r :top_level:module_name:*
+#
+#	'-r'  : probe the instance and these sub-instances
+
+# Define probed waves
+#add wave :pixracer_0:ahb_slave_mux_0:*
+#add wave :pixracer_0:memory_0:*
+#add wave :pixracer_0:jtag_slave_0:*
+#add wave :pixracer_0:gpio_0:*
+#add wave :pixracer_0:spi_master_0:*
+#add wave :tester_0:*
+#add wave :pixracer_0:*
+#add wave :pixracer_0:cortex_0:*
+
+
+# Initialize activity annotation
+set vcd_file "output/pixracer.vcd"
+vcd files $vcd_file
+vcd add -r -internal -ports -file $vcd_file :tbench:pixracer_0:*
+
+# Start annotation
+vcd dumpportson $vcd_file
+vcd on $vcd_file
+
+run 30ms
+
+# Stop annotation
+vcd off $vcd_file
+vcd dumpportsoff $vcd_file
+
+
+exit
+ 

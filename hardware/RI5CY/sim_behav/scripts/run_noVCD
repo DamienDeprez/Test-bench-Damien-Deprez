@@ -1,0 +1,21 @@
+
+# probe wave here, for any verilog module : 
+#
+#	add wave -r :top_level:module_name:*
+#
+#	'-r'  : probe the instance and these sub-instances
+
+# Define probed waves
+add wave :pixracer_0:data_bus_0:*
+add wave :pixracer_0:data_memory_0:*
+add wave :pixracer_0:instruction_memory_0:*
+add wave :pixracer_0:gpio_0:*
+add wave :tester_0:GPIN
+add wave :tester_0:GPOUT
+add wave :pixracer_0:GPOUT
+add wave :pixracer_0:riscv_core_0:id_stage_i:*
+
+run 30ms
+
+exit
+ 
